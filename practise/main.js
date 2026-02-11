@@ -54,7 +54,13 @@
 // const greet = function(name){
 //     console.log("hello," + name);
 // }
-
 // greet("haawa");
 // greet("nuur");
 // greet("fatma");
+
+// arrow functions ES6
+
+// const salaam = (age) => {
+//     console.log("My Age is :" + age);
+// }
+// salaam(40);
