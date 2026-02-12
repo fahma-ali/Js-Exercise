@@ -73,14 +73,27 @@
 //  showVariable();
 //  console.log(globalvariable)
 
-// array
+// array store multiple value in single variable
 
-let arrayname=["fahma","ali","hashi"];
+// let arrayname=["fahma","ali","hashi"];
 
-console.log(arrayname);
+// console.log(arrayname);
 // console.log(arrayname[0])
-arrayname.push("kaafi")
-arrayname.unshift("nuur")
-arrayname.pop()
-arrayname.shift();
-console.log(arrayname);
+// arrayname.push("kaafi")
+// arrayname.unshift("nuur")
+// arrayname.pop()
+// arrayname.shift();
+// console.log(arrayname);
+
+// object store detailed value
+let person= {
+    name:"fahma",
+    age:26,
+    city:"mogadishu",
+}
+
+    console.log(person)
+    console.log(person.city);
+    console.log(person.age)
+    //like array structure
+    console.log(person["age"])
