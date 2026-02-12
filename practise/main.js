@@ -64,3 +64,23 @@
 //     console.log("My Age is :" + age);
 // }
 // salaam(40);
+
+// local and global variables
+// let globalvariable="hey I'm Global variable"
+// function showVariable(){
+//     console.log(globalvariable)
+// }
+//  showVariable();
+//  console.log(globalvariable)
+
+// array
+
+let arrayname=["fahma","ali","hashi"];
+
+console.log(arrayname);
+// console.log(arrayname[0])
+arrayname.push("kaafi")
+arrayname.unshift("nuur")
+arrayname.pop()
+arrayname.shift();
+console.log(arrayname);
