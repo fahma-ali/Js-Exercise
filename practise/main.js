@@ -65,13 +65,40 @@
 // }
 // salaam(40);
 
+
+
+//SCOPE BLOCK Section
+
 // local and global variables
 // let globalvariable="hey I'm Global variable"
 // function showVariable(){
 //     console.log(globalvariable)
 // }
 //  showVariable();
+//console outside of the function
+
 //  console.log(globalvariable)
+
+// {
+//     let name ="ustaad hamouda"
+//     const age=26;
+//     var birthdate ="2025"
+    //expression function and arrow function did not access outside when its local variable
+
+    // const showVariable =function(){
+    //     let localvariable="i am localvariable"
+    //     console.log(localvariable)
+    // }
+    //     showVariable()
+    //declararion function can acces outside and inside of the block its works like var its global function
+//     function showVariable(){
+//         let localvariable ="I am local variable"
+//         console.log(localvariable)
+//     }
+//             showVariable()
+
+// }
+//         showVariable()
 
 // array store multiple value in single variable
 
@@ -86,14 +113,29 @@
 // console.log(arrayname);
 
 // object store detailed value
-let person= {
-    name:"fahma",
-    age:26,
-    city:"mogadishu",
-}
+// let person= {
+//     name:"fahma",
+//     age:26,
+//     city:"mogadishu",
+// }
 
-    console.log(person)
-    console.log(person.city);
-    console.log(person.age)
-    //like array structure
-    console.log(person["age"])
+    // console.log(person)
+    // console.log(person.city);
+    // console.log(person.age)
+    // //like array structure
+    // console.log(person["age"])
+    // person.name="Nasra";
+    // console.log(person)
+    // person.birthdate="1999-05-25"
+    // console.log(person)
+    let person2 ={
+        name:"Haliima",
+        age:27,
+        greet :   () =>{
+            console.log("Hello ",this.name)
+
+        }
+
+    }
+    console.log(person2.name)
+    console.log(person2.greet())
