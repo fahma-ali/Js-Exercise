@@ -128,14 +128,32 @@
     // console.log(person)
     // person.birthdate="1999-05-25"
     // console.log(person)
-    let person2 ={
-        name:"Haliima",
-        age:27,
-        greet :   () =>{
-            console.log("Hello ",this.name)
+    // let person2 ={
+    //     name:"Haliima",
+    //     age:27,
+    //     greet :   () =>{
+    //         console.log("Hello ",this.name)
 
+    //     }
+
+    // }
+    // console.log(person2.name)
+    // console.log(person2.greet())
+
+    //array of object its combining of array and object
+    let arrayStudent=["ali","ahmed","fahma"];
+    let students=[
+        {
+            name:"ali",
+            age:25,
+            class:"CA171"
+        },
+        {
+            name:"ahmed",
+            age:50,
+            class:"CA762"
         }
-
-    }
-    console.log(person2.name)
-    console.log(person2.greet())
+    ]
+    console.log(students[0])
+    console.log(students[1])
+    console.log(students[0].name)
