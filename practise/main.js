@@ -175,8 +175,20 @@
 //     console.log(studentArray[i]);
 // }
 // while loop
-let i = 0;
-while(i<5){
-    console.log("iteration number "+i)
-    i++;
-}
+// let i = 0;
+// while(i<5){
+//     console.log("iteration number "+i)
+//     i++;
+// }
+
+// do while loop
+// let i=0;
+// do{
+//     console.log("iteration "+i);
+//     i++;
+// }while(i<5);
+let password;
+do{
+    password=prompt("Enter You Password");
+}while(password !== "123")
+    console.log("welcom user");
