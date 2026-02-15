@@ -158,13 +158,25 @@
     // console.log(students[1])
     // console.log(students[0].name)
 
-    
+
 // loops
 
 // for(let i=0; i<10; i++){
 //     console.log(i)
 // }
 
-for(let k=1; k<=20; k++){
-    console.log("the value of key :",k)
+// for(let k=1; k<=20; k++){
+//     console.log("the value of key :",k)
+// }
+// for loop using array
+
+// let studentArray =["kaafi","rayaan","abdow","aliza"]
+// for(let i =0; i< studentArray.length; i++){
+//     console.log(studentArray[i]);
+// }
+// while loop
+let i = 0;
+while(i<5){
+    console.log("iteration number "+i)
+    i++;
 }
