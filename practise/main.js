@@ -187,8 +187,24 @@
 //     console.log("iteration "+i);
 //     i++;
 // }while(i<5);
-let password;
-do{
-    password=prompt("Enter You Password");
-}while(password !== "123")
-    console.log("welcom user");
+// let password;
+// do{
+//     password=prompt("Enter You Password");
+// }while(password !== "123")
+//     console.log("welcom user");
+// for of loop
+
+// const students=["rayaa","ali","abdi mayow"]
+// for(let student of students){
+//     console.log(student)
+// }
+
+// for in loop
+// const student ={
+//     name:"fahma",
+//     age:26,
+//     class:"CA175"
+// }
+// for(let keys in student){
+//     console.log(student[keys])
+// }
