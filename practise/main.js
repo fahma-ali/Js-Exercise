@@ -141,19 +141,30 @@
     // console.log(person2.greet())
 
     //array of object its combining of array and object
-    let arrayStudent=["ali","ahmed","fahma"];
-    let students=[
-        {
-            name:"ali",
-            age:25,
-            class:"CA171"
-        },
-        {
-            name:"ahmed",
-            age:50,
-            class:"CA762"
-        }
-    ]
-    console.log(students[0])
-    console.log(students[1])
-    console.log(students[0].name)
+    // let arrayStudent=["ali","ahmed","fahma"];
+    // let students=[
+    //     {
+    //         name:"ali",
+    //         age:25,
+    //         class:"CA171"
+    //     },
+    //     {
+    //         name:"ahmed",
+    //         age:50,
+    //         class:"CA762"
+    //     }
+    // ]
+    // console.log(students[0])
+    // console.log(students[1])
+    // console.log(students[0].name)
+
+    
+// loops
+
+// for(let i=0; i<10; i++){
+//     console.log(i)
+// }
+
+for(let k=1; k<=20; k++){
+    console.log("the value of key :",k)
+}
