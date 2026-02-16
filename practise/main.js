@@ -65,8 +65,6 @@
 // }
 // salaam(40);
 
-
-
 //SCOPE BLOCK Section
 
 // local and global variables
@@ -83,14 +81,14 @@
 //     let name ="ustaad hamouda"
 //     const age=26;
 //     var birthdate ="2025"
-    //expression function and arrow function did not access outside when its local variable
+//expression function and arrow function did not access outside when its local variable
 
-    // const showVariable =function(){
-    //     let localvariable="i am localvariable"
-    //     console.log(localvariable)
-    // }
-    //     showVariable()
-    //declararion function can acces outside and inside of the block its works like var its global function
+// const showVariable =function(){
+//     let localvariable="i am localvariable"
+//     console.log(localvariable)
+// }
+//     showVariable()
+//declararion function can acces outside and inside of the block its works like var its global function
 //     function showVariable(){
 //         let localvariable ="I am local variable"
 //         console.log(localvariable)
@@ -119,45 +117,44 @@
 //     city:"mogadishu",
 // }
 
-    // console.log(person)
-    // console.log(person.city);
-    // console.log(person.age)
-    // //like array structure
-    // console.log(person["age"])
-    // person.name="Nasra";
-    // console.log(person)
-    // person.birthdate="1999-05-25"
-    // console.log(person)
-    // let person2 ={
-    //     name:"Haliima",
-    //     age:27,
-    //     greet :   () =>{
-    //         console.log("Hello ",this.name)
+// console.log(person)
+// console.log(person.city);
+// console.log(person.age)
+// //like array structure
+// console.log(person["age"])
+// person.name="Nasra";
+// console.log(person)
+// person.birthdate="1999-05-25"
+// console.log(person)
+// let person2 ={
+//     name:"Haliima",
+//     age:27,
+//     greet :   () =>{
+//         console.log("Hello ",this.name)
 
-    //     }
+//     }
 
-    // }
-    // console.log(person2.name)
-    // console.log(person2.greet())
+// }
+// console.log(person2.name)
+// console.log(person2.greet())
 
-    //array of object its combining of array and object
-    // let arrayStudent=["ali","ahmed","fahma"];
-    // let students=[
-    //     {
-    //         name:"ali",
-    //         age:25,
-    //         class:"CA171"
-    //     },
-    //     {
-    //         name:"ahmed",
-    //         age:50,
-    //         class:"CA762"
-    //     }
-    // ]
-    // console.log(students[0])
-    // console.log(students[1])
-    // console.log(students[0].name)
-
+//array of object its combining of array and object
+// let arrayStudent=["ali","ahmed","fahma"];
+// let students=[
+//     {
+//         name:"ali",
+//         age:25,
+//         class:"CA171"
+//     },
+//     {
+//         name:"ahmed",
+//         age:50,
+//         class:"CA762"
+//     }
+// ]
+// console.log(students[0])
+// console.log(students[1])
+// console.log(students[0].name)
 
 // loops
 
@@ -208,3 +205,37 @@
 // for(let keys in student){
 //     console.log(student[keys])
 // }
+
+// conditional statement
+
+// if statement
+// let age =17;
+// if(age>=18){
+//     console.log("you are a dult")
+// }
+// else
+// {
+//     console.log("you are minor")
+// }
+// else if statement
+// let age=18;
+// if(age<13){
+//     console.log("you are child")
+// }else if(age<18){
+//     console.log("you are minor")
+// }else if(age<20){
+//     console.log("you are teenager")
+// }else{
+//     console.log("you are adult")
+// }
+
+// ternary operator shorthand of if else
+// let age = 20;
+// let msg = age <= 20 ? "you are teenager" : "you are adult";
+// console.log(msg);
+
+// let age = 25;
+//  age <= 20 ? console.log("you are teenager") :console.log("you are adult");
+// ternary operator shorthand of if statement you have to use && instead of ? quation mark
+let age =18;
+age>=20 && console.log("you are adult");
