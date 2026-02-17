@@ -243,12 +243,38 @@
 // higher order method arrays
 
 // forEach method
-let students =["kaafi","nuur","fadima"]
-console.log("use array method arrow function best way")
-students.forEach(student =>{
-    console.log("Student Name Is ",student)
-})
-console.log("console as expression function")
-students.forEach(function(student){
-    console.log("student name is ",student)
-})
+// let students =["kaafi","nuur","fadima"]
+// console.log("use array method arrow function best way")
+// students.forEach(student =>{
+//     console.log("Student Name Is ",student)
+// })
+// console.log("console as expression function")
+// students.forEach(function(student,index){
+//     console.log("student name is ",student +" "+index)
+// }) 
+// remeber index is optional
+//map
+// let test1Numbers =[1,2,3,4,5,6,7];
+// let multi = test1Numbers.map((number)=>{
+//    console.log(number*2) 
+// })
+
+// let numbers =[1,2,3,4,5,6,7]
+// let number2 =numbers.map((number)=> number*2);
+// filter method
+// let numbers =[1,2,3,4,5,6]
+// let evennumbers =numbers.filter((even)=> even %2 ===0)
+// console.log(evennumbers);
+
+// odd number
+// let numbers =[1,2,3,4,5,6]
+// let oddnumbers =numbers.filter((odd)=> odd % 2 !==0)
+// console.log("odd number ",oddnumbers)
+// reduce method
+// let numbers =[1,2,3,4,5];
+// let sum =numbers.reduce((total,num)=> total+num, 0)
+// console.log(sum);
+// let sum=numbers.reduce((total,num)=>{
+//     return total+num;
+// },0)
+// console.log(sum);
