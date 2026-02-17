@@ -237,5 +237,18 @@
 // let age = 25;
 //  age <= 20 ? console.log("you are teenager") :console.log("you are adult");
 // ternary operator shorthand of if statement you have to use && instead of ? quation mark
-let age =18;
-age>=20 && console.log("you are adult");
+// let age =18;
+// age>=20 && console.log("you are adult");
+
+// higher order method arrays
+
+// forEach method
+let students =["kaafi","nuur","fadima"]
+console.log("use array method arrow function best way")
+students.forEach(student =>{
+    console.log("Student Name Is ",student)
+})
+console.log("console as expression function")
+students.forEach(function(student){
+    console.log("student name is ",student)
+})
