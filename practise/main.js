@@ -278,3 +278,22 @@
 //     return total+num;
 // },0)
 // console.log(sum);
+
+// destructuring  is allows you populated exist array value to new variables every item
+
+// old way
+// let names =["ali","nuur"]
+// let name1 =names[0]
+// let name2 =names[1]
+
+// console.log(name1)
+// console.log(name2)
+// destructuring way
+// let names =["fahma","ali"]
+// let[name1,name2] =names;
+// console.log(name1)
+// Default parameters
+ function greet(name ="Guest"){
+    console.log(`hello ${name}`)
+ }
+ greet("fahma")
