@@ -251,12 +251,12 @@
 // console.log("console as expression function")
 // students.forEach(function(student,index){
 //     console.log("student name is ",student +" "+index)
-// }) 
+// })
 // remeber index is optional
 //map
 // let test1Numbers =[1,2,3,4,5,6,7];
 // let multi = test1Numbers.map((number)=>{
-//    console.log(number*2) 
+//    console.log(number*2)
 // })
 
 // let numbers =[1,2,3,4,5,6,7]
@@ -293,7 +293,110 @@
 // let[name1,name2] =names;
 // console.log(name1)
 // Default parameters
- function greet(name ="Guest"){
-    console.log(`hello ${name}`)
- }
- greet("fahma")
+//  function greet(name ="Guest"){
+//     console.log(`hello ${name}`)
+//  }
+//  greet("fahma")
+//  spread operator
+// let number =[1,2,3,5]
+// let copynumber =[...number,6,7]
+// console.log(copynumber)
+// // rest operator
+// function sum(...numbers){
+//    return numbers.reduce((num,total)=> num+total,0)
+
+// }
+// console.log(sum(40,50)) its not array reduce uses array so its return error
+// conver to array value
+// console.log(sum([40,50]))
+
+// asynchronous(syn or blocked)
+// function fetUserData(){
+//    alert("hi fahma say yes or no ")
+//    return 5+5;
+// }
+// console.log("this is first line to be executed because its asynchronous");
+
+// console.log(fetUserData())
+// console.log("this is blocked untill its executed lines before")
+
+// asynchronous (asyn or un-blocked)
+// function getData(callback){
+//    setTimeout(()=>{
+//       const age =28;
+//       callback(age)
+//    },3000)
+// }
+// console.log("state display data")
+
+// getData(function(age)
+// {
+//    console.log(age)
+// })
+// console.log("display data as asynchromous")
+
+// promises
+// function fetUserData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const success = false;
+//       if (success) {
+//         resolve({ id: 1, name: "fahma ali" });
+//       } else {
+//         reject("you failed to fetch data");
+//       }
+//     }, 1000);
+//   });
+// }
+
+// fetUserData()
+// .then((result)=>{
+//    console.log("your result is ",result)
+// })
+// .catch((error)=>{
+//    console.log(error)
+// })
+//replace await and async instead of then,catch
+// function getUserData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       const jsonData = '{"name":"Ali","age":25}';
+//       resolve(jsonData);
+//     }, 2000);
+//   });
+// }
+
+// json
+// const info ={
+//    id:1,
+//    name:"fahma",
+//    age:40,
+// }
+// console.log(info)
+// convert object to json now its object use stringify method
+// let jsonData=JSON.stringify(info)
+// console.log(jsonData)
+// // const data ={
+//    "id":1,
+//    "name":"fahma",
+//    "age":48,
+// }
+// console.log(data)
+// convert json to object use parse method 
+// let objectdata = JSON.parse(jsonData)
+// console.log(objectdata)
+// fetching example
+async function fetchingData() {
+   try{
+      console.log("data is fetching ...");
+      const response = await fetch("./json/data.json");
+      let data = await response.json();
+      console.log("response is  : ",data.name);
+
+   }catch(err){
+      console.log(err)
+   }
+   
+}
+fetchingData();
+console.log("contineous fetching data")
