@@ -386,17 +386,75 @@
 // let objectdata = JSON.parse(jsonData)
 // console.log(objectdata)
 // fetching example
-async function fetchingData() {
-   try{
-      console.log("data is fetching ...");
-      const response = await fetch("./json/data.json");
-      let data = await response.json();
-      console.log("response is  : ",data.name);
+// async function fetchingData() {
+//    try{
+//       console.log("data is fetching ...");
+//       const response = await fetch("./json/data.json");
+//       let data = await response.json();
+//       console.log("response is  : ",data.name);
 
-   }catch(err){
-      console.log(err)
-   }
+//    }catch(err){
+//       console.log(err)
+//    }
    
+// }
+// fetchingData();
+// console.log("contineous fetching data")
+// callback function
+// function greet(name){
+//  console.log("hello",name);
+// }
+// // greet("fahma")
+
+// function userInput(callback){
+//    const name =prompt("enter your name");
+//    callback(name);
+// }
+// userInput(greet);
+// function operate(x,y,callback){
+//    return callback(x,y);
+// }
+// function add(a,b){
+//    return a+b;
+// }
+// function sub(a,b){
+//    return a+b;
+// }
+// console.log("operate add " ,operate(5,5,add))
+
+// http request
+// async function fetchData() {
+//    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//       if(!response.ok){
+//          throw new Error(`http error status ${response.status}`);
+         
+//       }
+//       const data = await response.json();
+//       console.log(data);
+// }
+// fetchData();
+// http post
+async function postData() {
+  try{
+ const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
+      method:"POST",
+         headers:{
+            'Content-Type':'application/json'
+         },
+         body:JSON.stringify({
+            title:"title tijabo",
+            body:"body test",
+            userId:1,
+         })
+   })
+   if(!response.ok){
+      throw new Error(`there is error here ${response.status}`)
+   }
+   console.log(response)
+   const data = await response.json();
+   console.log(data)
+  }catch(error){
+   console.log(error);
+  }
 }
-fetchingData();
-console.log("contineous fetching data")
+postData();
