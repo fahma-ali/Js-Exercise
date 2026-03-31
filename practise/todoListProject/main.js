@@ -19,11 +19,11 @@ function addTask(e) {
     }
     function addTaskToDom(task) {
         const li = document.createElement("li")
-        li.className = `todo-item`
+        li.className = `todo-item ${task.completed ? completed : ""}`
             li.dataset.id = task.id
 
-        li.innerHTML = `<input type ="checkbox" class="completed-checkbox"> 
- <span> ${todoInput.value}</span>
+        li.innerHTML = `<input type ="checkbox" class="completed-checkbox" ${task.completed ? completed : ""}> 
+ <span class="task"> ${task.text}</span>
   <button class ="edit-btn">Edit</button>
   <button class="delete-btn">Delete</button>`
         console.log(li)

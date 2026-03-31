@@ -13,3 +13,42 @@ body{
     border-radius: 5px;
     
 }
+#todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+.todo-container h1{
+    text-align: center;
+} 
+#todo-input{
+    padding: 10px;
+    flex: 1;
+}
+#todo-form button{
+    padding: 10px;
+    font-size: 16px;
+}
+#todo-list{
+    list-style: none;
+    padding: 0;
+}
+.todo-item{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+
+.todo-item.completed .task{
+    text-decoration: line-through;
+    color: gray;
+
+}
+.todo-item .task{
+    flex: 1;
+    margin: 0 10px
+}
+.todo-item button{
+    margin-left: px;
+}
