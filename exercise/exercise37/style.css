@@ -82,5 +82,7 @@ h1 {
 .btn-delete {
     padding: 6px 12px;
     margin-right: 8px;
+    font-size: 12px;
+    background-color: #da9037;
     cursor: pointer;
 }

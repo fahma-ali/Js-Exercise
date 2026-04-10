@@ -92,9 +92,9 @@ function toggleTaskCompletion(taskId, li, isCompleted) {
     }
 }
 
-function deleteTask(id) {
+function deleteTask(taskId) {
     let tasks = getTasksFromLocalStorage();
-    tasks = tasks.filter(task => task.id != id);
+    tasks = tasks.filter(task => task.id != taskId);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
 }
