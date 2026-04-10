@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #345;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0
+}
+
+.brand-title{
+    font-size: 1.7rem;
+    padding: 0 20px;
+    line-height: 60px;
+}
+.navbar-link{
+    height: 100%;
+}
+.navbar-link ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.navbar-link li{
+    padding: 0 10px;
+}
+.navbar-link a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 60px;
+    display: block;
+}
+.navbar-link a:hover{
+    background-color: rgb(119, 124, 131);
+}
+.toggle-btn{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+.toggle-btn .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+#Home{
+    height: 100vh;
+    background-color: rgb(51, 85, 53);
+    padding-top: 150px;
+}
+ section h1{
+    text-align: center;
+}
+#Contact{
+    height: 100vh;
+    background-color: rgb(53, 51, 85);
+    text-align: center;
+    padding-top: 150px;
+}
+#Service{
+    height: 100vh;
+    background-color: rgb(43, 32, 202);
+    text-align: center;
+    padding-top: 150px;
+}
+#About{
+    height: 100vh;
+    background-color: rgb(206, 209, 28);
+    text-align: center;
+    padding-top: 150px;
+}
+#Portfolio{
+    height: 100vh;
+    background-color: rgb(165, 18, 165);
+    text-align: center;
+    padding-top: 150px;
+}
+#Blog{
+    height: 100vh;
+    background-color: rgb(43, 32, 202);
+    text-align: center;
+    padding-top: 150px;
+}
+#Careers{
+    height: 100vh;
+    background-color: rgb(223, 61, 69);
+    padding-top: 150px;
+}
+h1{
+    text-align: center;
+}
+@media(max-width:768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-btn{
+        display: flex;
+    }
+    .navbar-link{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0; 
+        transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+    }
+    .navbar-link ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-link li{
+        text-align: center;
+    }
+    .navbar-link a{
+        line-height: 20px;
+        padding: 10px;
+    }
+    .navbar.active .navbar-link{
+        max-height: 300px;
+        opacity: 1;
+    }
+    .navbar.active .toggle-btn .bar:nth-child(2){
+        opacity: 0;
+    }
+    .navbar.active .toggle-btn .bar:nth-child(1){
+        transform: translateY(12px) rotate(40deg);
+    }
+    .navbar.active .toggle-btn .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-40deg);
+    }
+
+}
