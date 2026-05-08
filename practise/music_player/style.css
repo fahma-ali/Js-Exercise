@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.music-player{
+ background-color: #fff;
+ border-radius: 20px;
+ box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+ width: 350px;
+ text-align: center;
+ padding: 30px;
+
+}
+.song-info img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+
+}
+#title{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+
+}
+#artist{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.progress-container{
+    margin-bottom: 20px;
+}
+ .progress-container .progress-bar{
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 6px;
+    overflow: hidden;
+}
+.progress{
+    background-color: #1db954;
+    width: 0%;
+    height: 100%;
+    transition: width 0.15 linear;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #566;
+    margin-top: 5px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 15px;
+    padding: 10px;
+}
+.control-btn{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    padding: 10px;
+    transition:  color 0.3s ease;
+}
+.control-btn:hover{
+    color: #1db954;
+}
+.play-btn{
+    font-size: 40px;
+}
+.additional-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.volume-container,.speed-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volume-container i,.speed-container i{
+    color: #666;
+    font-size: 18px;
+    margin-right: 10px;
+}
+#volume{
+    -webkit-appearance: none;
+    width: 100x;
+    height: 5px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none
+}
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#volume::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#speed{
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+#speed:hover{
+    outline: none;
+    border-color: #1db954;
+}
