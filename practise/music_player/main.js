@@ -30,6 +30,7 @@ const songs = [
     }
 ];
 
+
 let songIdex = 0;
 let isPlaying = false;
 let speed = 1;
@@ -85,6 +86,16 @@ function prevSong() {
 
 
 }
+function updateProgress(e){
+   
+        const {duration,currentTime}=e.srcElement
+        if(isNaN(duration)) return
+        const progressPercentage=(currentTime/duration)*100;
+        console.log(progressPercentage)
+        progress.style.width=`${progressPercentage}%`;
+        const progressSeconds =Math.floor(duration/60);
+        const progressMini=Math.floor(duration%60)
+}
 //Event handler
 playBtn.addEventListener("click", () => {
     if (isPlaying) {
@@ -95,4 +106,6 @@ playBtn.addEventListener("click", () => {
     }
 })
 nextBtn.addEventListener("click", nextSong)
+
 prevBtn.addEventListener("click",prevSong)
+audioElement.addEventListener("timeupdate",updateProgress)
