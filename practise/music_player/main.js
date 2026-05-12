@@ -42,6 +42,7 @@ function loadSong(song) {
     audioElement.src = song.src
 }
 loadSong(songs[songIdex])
+
 function playSong() {
     playBtn.querySelector("i").classList.remove("fa-play");
     playBtn.querySelector("i").classList.add("fa-pause");
@@ -91,10 +92,32 @@ function updateProgress(e){
         const {duration,currentTime}=e.srcElement
         if(isNaN(duration)) return
         const progressPercentage=(currentTime/duration)*100;
-        console.log(progressPercentage)
         progress.style.width=`${progressPercentage}%`;
-        const progressSeconds =Math.floor(duration/60);
-        const progressMini=Math.floor(duration%60)
+        let durationSeconds =Math.floor(duration/60);
+        let durationMini=Math.floor(duration%60)
+        if(durationSeconds < 10)
+        {
+            durationSeconds = `0${durationSeconds}`
+            durationEl.textContent =`${durationMini}:${durationSeconds}`;
+
+        }
+        let currentMini = Math.floor(currentTime/60);
+        let currentSeconds =Math.floor(currentTime%60)
+            if(currentSeconds <10){
+                currentSeconds =`0${currentSeconds}`
+            }
+        
+        currentTimeEl.textContent =`${currentMini}:${currentSeconds}`
+        audioElement.playbackRate=speed
+}
+function setProgress(e){
+    let setWidth=this.clientWidth;
+    let horzantalWidth =e.offsetX
+    console.log(horzantalWidth)
+    const duration = audioElement.duration;
+    const newTime =(horzantalWidth/setWidth)*duration;
+    console.log(newTime)
+    audioElement.currentTime =`${newTime}`;
 }
 //Event handler
 playBtn.addEventListener("click", () => {
@@ -109,3 +132,17 @@ nextBtn.addEventListener("click", nextSong)
 
 prevBtn.addEventListener("click",prevSong)
 audioElement.addEventListener("timeupdate",updateProgress)
+
+progressContainer.addEventListener("click",setProgress)
+
+volumeSlider.addEventListener("input", (e)=>{
+    audioElement.volume = e.target.value;
+
+})
+
+speedSelect.addEventListener("change",(e)=>{
+    speed =parseFloat(e.target.value);
+    audioElement.playbackRate =speed;
+})
+//load metadata
+audioElement.addEventListener("lodadeddata",updateProgress)
